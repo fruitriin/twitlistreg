@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+Remove this if you use the .htaccess -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TwitListReg ID取得フォーム</title>
+<meta name="description" content="">
+<meta name="author" content="Nashi">
+
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script src="resource/jquery-2.0.3.min.js"></script>
+<script src="resource/templates/getIDs.js" class="userScript" type="text/javascript"></script>
+
+</head>
+<body>
+<div id="wrap">
+<div id="conf">
+取得対象 @<input type="text" name="ID">
+</div>
+■対象アカウントのリスト<br>
+<div id="list">
+<input type="submit" value="リスト一覧取得">
+</div>
+<br>
+<br>
+■対象アカウントのフォロー/フォロワー<br>
+<input type="radio" name="target" value="Follow">フォローしている人を取得する<br>
+<input type="radio" name="target" value="Follower">フォロワーを取得する<br>
+<br>
+<br>
+<br>
+<input type="submit" name="result" value="アカウントリスト取得">
+<hr>
+
+<div id="result"></div>
+<hr>
+<footer>
+
+</footer>
+</div>
+</body>
+</html>

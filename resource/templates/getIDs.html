@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>TwitListReg ID取得フォーム</title>
+        <meta name="description" content="">
+        <meta name="author" content="Nashi">
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <script src="resource/jquery-2.0.3.min.js"></script>
+        <script src="resource/templates/getIDs.js" class="userScript" type="text/javascript"></script>
+        <style>
+
+            button {
+                border-top: solid #c0deed;
+                border-left: solid #c0deed;
+                border-right: solid #c0deed;
+                border-radius: 3px;
+                background-color: white;
+                margin: 0;
+                padding: 15px 10px;
+                outline:none;
+            }
+
+            div#accounts, div#status {
+                border: solid 1px #ccc;
+                padding-top: 10px;
+            }
+            .selected {
+                border-style: outset;
+                background-color: #c0deed;
+                color: white;
+                font-weight: bold;
+                text-shadow: black 1px 1px 1px;
+                position: relative;
+            }
+            .selected:after, .selected:before {
+                top: 100%;
+                left: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+            .selected:after {
+
+                border-color: rgba(136, 183, 213, 0);
+                border-top-color: #c0deed;
+                border-width: 10px;
+                margin-left: -10px;
+            }
+            .selected:before {
+                border-color: rgba(194, 225, 245, 0);
+                border-top-color: #888;
+                border-width: 13px;
+                margin-left: -13px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="selector">
+                <button name="accounts" class="selected">
+                    アカウントから取得する
+                </button>
+                <button name="status">
+                    つぶやきから取得する
+                </button>
+            </div>
+            <div id="controler">
+                <div id="accounts">
+                    取得対象 @
+                    <input type="text" name="ID">
+                    <br>
+                    ■リストから取得する
+                    <br>
+                    <div id="list">
+                        <input type="submit" value="リスト一覧取得">
+                    </div>
+                    <br>
+                    <br>
+                    ■フォロー/フォロワーを取得する
+                    <br>
+                    <input type="radio" name="target" value="Follow">
+                    フォローしている人を取得する
+                    <br>
+                    <input type="radio" name="target" value="Follower">
+                    フォロワーを取得する
+                    <br>
+                    <input type="submit" name="result" value="アカウントリスト取得">
+                </div>
+                <div id="status" style="display: none;">
+                    つぶやきのURL<input type="text" name="statusURL">
+                    <br>
+                     <input type="radio" name="target" value="RT" checked>
+                    RTした人の一覧
+                    <br>
+                    <input type="radio" name="target" value="Fav" disabled>
+                    <s>ふぁぼった人の一覧</s>（そんなAPIなかったです）
+                    <br>
+                    <br>
+                    <br>
+                    <input type="submit" name="result" value="アカウントリスト取得">
+                </div>
+            </div>
+            <hr>
+
+            <div id="result"></div>
+            <hr>
+            <footer>
+
+            </footer>
+        </div>
+    </body>
+</html>

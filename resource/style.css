@@ -1,0 +1,87 @@
+@charset "UTF-8";
+html {
+    text-align: center;
+    font: 13px;
+    *font-size: small;
+    *font: x-small;
+    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'MS P Gothic', sans-serif;
+    padding-bottom: 50px;
+}
+
+body{
+    background-color:#c0deed;
+    background-image: url(../images/110610.png);
+    background-repeat:no-repeat;
+    background-position:right bottom;
+    font-size:90%;
+    text-align:center;
+}
+
+div#wrap {
+    margin: 0 auto;
+    width: 1024px;
+    position: relative;
+}
+
+
+h1{
+    display: inline;
+    font-size:150%;
+}
+
+h1 a:link,h1 a:visited,h1 a:active,h1 a:hover{
+	color:black;
+}
+
+h3{
+    font-size:110%;
+    background-color:#c0deed;
+    border-left: solid 2px #CCCCFF;
+    border-bottom: solid 4px #CCCCFF;
+    margin-right:10px
+}
+
+
+a img {
+	border: none;
+}
+
+
+div#main{
+	background-color:#FFF;
+	width:800px;
+	min-height:400px;
+	padding-left:10px;
+	text-align:justify;
+
+}
+div#registor{
+    float: left;
+    margin-right:10px;
+}
+
+div#util{
+    
+}
+
+textarea{
+	font-size:100%;
+}
+
+div.foot{
+/*	background-color:#FFF;
+*/
+	margin-left:auto;
+	margin-right:auto;
+	width:800;
+	padding-left:10px;
+	text-align:center;
+}
+
+div.history{
+	text-align:justify;
+    min-height:400px;
+}
+table{
+	font-size:100%;
+}
